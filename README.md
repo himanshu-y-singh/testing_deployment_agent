@@ -1,6 +1,6 @@
-# React Login App
+# React Login & Signup App
 
-This is a simple React login page built using Vite.
+This is a simple React login and signup page built using Vite.
 
 ## 🚀 Getting Started
 
@@ -26,9 +26,10 @@ http://localhost:5173
   - main.jsx
   - components/
     - Login.jsx
+    - Signup.jsx
 
 ## ✨ Features
 
-- Simple login form
-- Email & password input
+- Login & Signup forms
+- Toggle between login/signup
 - Basic form handling
