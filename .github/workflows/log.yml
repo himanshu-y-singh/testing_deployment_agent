@@ -3,7 +3,7 @@ name: Login Branch Trigger
 on:
   push:
     branches:
-      - login   # triggers only when code is pushed to 'login' branch
+      - "**"   # triggers only when code is pushed to 'login' branch
 
 jobs:
   log-success:
