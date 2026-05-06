@@ -38,7 +38,7 @@ env:
   PROJECT_ID: 'mimetic-retina-486715-i3' # TODO: update to your Google Cloud project ID
   REGION: 'us-central1' # TODO: update to your region
   SERVICE: 'test' # TODO: update to your service name
-  WORKLOAD_IDENTITY_PROVIDER: 'principal://iam.googleapis.com/projects/816163793182/locations/global/workloadIdentityPools/github-action/subject/himanshu-y-singh' # TODO: update to your workload identity provider
+  WORKLOAD_IDENTITY_PROVIDER: 'https://iam.googleapis.com/projects/816163793182/locations/global/workloadIdentityPools/github-action/providers/github' # TODO: update to your workload identity provider
 
 jobs:
   list-services:
