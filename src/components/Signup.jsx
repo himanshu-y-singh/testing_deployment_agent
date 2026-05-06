@@ -6,6 +6,7 @@ function Signup({ onSwitch }) {
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
+    print("handel submit")
     e.preventDefault();
     console.log('Name:', name);
     console.log('Email:', email);
