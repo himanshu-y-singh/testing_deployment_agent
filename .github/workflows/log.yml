@@ -1,0 +1,14 @@
+name: Login Branch Trigger
+
+on:
+  push:
+    branches:
+      - login   # triggers only when code is pushed to 'login' branch
+
+jobs:
+  log-success:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Log success message
+        run: echo "✅ Code successfully pushed to login branch!"
