@@ -1,15 +1,37 @@
-import React, { useState } from 'react';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import { useState } from 'react';
 
-function App() {
-  const [isLogin, setIsLogin] = useState(true);
+export default function App() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  return isLogin ? (
-    <Login onSwitch={() => setIsLogin(false)} />
-  ) : (
-    <Signup onSwitch={() => setIsLogin(true)} />
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Login attempted for ${email}`);
+  };
+
+  return (
+    <div className="container">
+      <form className="login-box" onSubmit={handleSubmit}>
+        <h1>Login</h1>
+
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 }
-
-export default App;
