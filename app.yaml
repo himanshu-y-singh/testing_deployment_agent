@@ -1,4 +1,5 @@
 runtime: nodejs20
-service: default
+
+service: flight
 
 entrypoint: npm run start

@@ -1,15 +1,45 @@
-import React, { useState } from 'react';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import { useState } from 'react';
 
-function App() {
-  const [isLogin, setIsLogin] = useState(true);
+export default function App() {
+  const [from, setFrom] = useState('');
+  const [to, setTo] = useState('');
+  const [date, setDate] = useState('');
 
-  return isLogin ? (
-    <Login onSwitch={() => setIsLogin(false)} />
-  ) : (
-    <Signup onSwitch={() => setIsLogin(true)} />
+  const handleBooking = (e) => {
+    e.preventDefault();
+    alert(`Flight booked from ${from} to ${to} on ${date}`);
+  };
+
+  return (
+    <div className="container">
+      <form className="booking-box" onSubmit={handleBooking}>
+        <h1>Flight Ticket Booking</h1>
+
+        <input
+          type="text"
+          placeholder="From"
+          value={from}
+          onChange={(e) => setFrom(e.target.value)}
+          required
+        />
+
+        <input
+          type="text"
+          placeholder="To"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
+          required
+        />
+
+        <input
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
+
+        <button type="submit">Book Flight</button>
+      </form>
+    </div>
   );
 }
-
-export default App;
