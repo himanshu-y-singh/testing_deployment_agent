@@ -1,4 +1,4 @@
 runtime: nodejs20
-service: login
+service: default
 
 entrypoint: npm run start
