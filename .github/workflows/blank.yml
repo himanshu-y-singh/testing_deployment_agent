@@ -39,6 +39,7 @@ env:
   REGION: 'us-central1' # TODO: update to your region
   SERVICE: 'test' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: 'projects/816163793182/locations/global/workloadIdentityPools/github-action/providers/github' # TODO: update to your workload identity provider
+  SERVICE_ACCOUNT: "chatbot@mimetic-retina-486715-i3.iam.gserviceaccount.com"
 
 jobs:
   list-services:
