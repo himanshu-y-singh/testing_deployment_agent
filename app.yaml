@@ -1,4 +1,3 @@
 runtime: nodejs20
-service: default
-
+service: employee-portal
 entrypoint: npm run start
