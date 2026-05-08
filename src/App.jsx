@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
-import Login from './components/Login';
-import Signup from './components/Signup';
+export default function App() {
+  const foods = [
+    { name: 'Burger', price: '$10' },
+    { name: 'Pizza', price: '$15' },
+    { name: 'Pasta', price: '$12' }
+  ];
 
-function App() {
-  const [isLogin, setIsLogin] = useState(true);
+  return (
+    <div className="container">
+      <h1>Food Delivery App</h1>
 
-  return isLogin ? (
-    <Login onSwitch={() => setIsLogin(false)} />
-  ) : (
-    <Signup onSwitch={() => setIsLogin(true)} />
+      <div className="food-grid">
+        {foods.map((food, index) => (
+          <div className="food-card" key={index}>
+            <h2>{food.name}</h2>
+            <p>{food.price}</p>
+            <button>Order Now</button>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
-
-export default App;

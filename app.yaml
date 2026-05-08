@@ -1,4 +1,3 @@
 runtime: nodejs20
-service: default
-
+service: food-delivery-app
 entrypoint: npm run start
